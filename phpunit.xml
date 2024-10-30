@@ -1,0 +1,39 @@
+<phpunit
+        backupGlobals="false"
+        colors="true"
+        convertErrorsToExceptions="true"
+        convertNoticesToExceptions="true"
+        convertWarningsToExceptions="true">
+    <testsuites>
+        <testsuite name="unit-tests">
+            <directory prefix="" suffix="Test.php">./tests</directory>
+        </testsuite>
+    </testsuites>
+    <coverage cacheDirectory="./.phpunit-cache/"
+              includeUncoveredFiles="true"
+              processUncoveredFiles="false"
+              pathCoverage="false"
+              ignoreDeprecatedCodeUnits="true"
+              disableCodeCoverageIgnore="true">
+        <report>
+            <html outputDirectory="html-coverage" lowUpperBound="50" highLowerBound="90"/>
+            <xml outputDirectory="html-coverage/xml"/>
+            <!--
+            <clover outputFile="clover.xml"/>
+            <crap4j outputFile="crap4j.xml" threshold="50"/>
+            <php outputFile="coverage.php"/>
+            <text outputFile="coverage.txt" showUncoveredFiles="false" showOnlySummary="true"/>
+            -->
+        </report>
+        <include>
+            <directory>tests</directory>
+        </include>
+        <exclude>
+        </exclude>
+    </coverage>
+    <php>
+        <const name="SENDGRID_KEY" value="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" />
+        <const name="SENDGRID_LIST_1" value="0407e0f4-5f82-442c-b9bd-c04ff717f28a" />
+        <const name="SENDGRID_LIST_2" value="bf3af0f1-b8c4-42a9-9c7e-8a8904be6f06" />
+    </php>
+</phpunit>
